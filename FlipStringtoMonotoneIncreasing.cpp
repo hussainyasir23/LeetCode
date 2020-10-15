@@ -3,6 +3,7 @@ public:
     int minFlipsMonoIncr(string S) {
         int N = S.length();
         int P[N+1];
+        memset(P,0,sizeof(P));
         for (int i = 0; i < N; ++i)
             P[i+1] = P[i] + (S[i] == '1' ? 1 : 0);
         int ans = INT_MAX;
